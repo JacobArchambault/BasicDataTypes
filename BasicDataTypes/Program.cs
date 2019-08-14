@@ -27,6 +27,12 @@ namespace BasicDataTypes
                 myInt, myString, b1, b2, b3, b4);
             Console.WriteLine();
         }
+        static void DefaultDeclarations()
+        {
+            Console.WriteLine("=> Default Declarations:");
+            int myInt = default;
+
+        }
         static void Main(string[] args)
         {
             LocalVarDeclarations();
