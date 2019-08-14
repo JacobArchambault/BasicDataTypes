@@ -13,7 +13,7 @@ namespace BasicDataTypes
             Console.WriteLine("=> Data Declarations:");
             // Local variables are declared and initialized as follows: 
             // dataType varName = initialValue;
-            int myInt = 0;
+            int myInt = 1;
 
             string myString;
             myString = "This is my character data";
@@ -31,11 +31,32 @@ namespace BasicDataTypes
         {
             Console.WriteLine("=> Default Declarations:");
             int myInt = default;
-
+            Console.WriteLine("myInt: {0}", myInt);
+            Console.WriteLine();
+        }
+        static void ParsFromStringWithTryParse()
+        {
+            Console.WriteLine("=> Data type parsing with TryParse:");
+            if (bool.TryParse("True", out bool b)) ;
+            {
+                Console.WriteLine("Value of b: {0}", b);
+            }
+            string value = "Hello";
+            if (double.TryParse(value, out double d))
+            {
+                Console.WriteLine("Value of d: {0}", d);
+            }
+            else
+            {
+                Console.WriteLine("Failed to convert the input ({0}) to a double", value);
+            }
+            Console.WriteLine();
         }
         static void Main(string[] args)
         {
             LocalVarDeclarations();
+            DefaultDeclarations();
+            ParsFromStringWithTryParse();
             Console.ReadLine();
         }
     }
