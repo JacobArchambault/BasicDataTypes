@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Numerics;
 
 namespace BasicDataTypes
@@ -22,10 +18,8 @@ namespace BasicDataTypes
             // Declare 3 bools on a single line.
             bool b1 = true, b2 = false, b3 = b1;
 
-            // Use System.Boolean data type to declare a bool.
-            System.Boolean b4 = false;
             Console.WriteLine("Your data: {0}, {1}, {2}, {3}, {4}, {5}",
-                myInt, myString, b1, b2, b3, b4);
+                myInt, myString, b1, b2, b3);
             Console.WriteLine();
         }
         static void DefaultDeclarations()
@@ -38,7 +32,7 @@ namespace BasicDataTypes
         static void ParsFromStringWithTryParse()
         {
             Console.WriteLine("=> Data type parsing with TryParse:");
-            if (bool.TryParse("True", out bool b)) ;
+            if (bool.TryParse("True", out bool b))
             {
                 Console.WriteLine("Value of b: {0}", b);
             }
@@ -67,7 +61,7 @@ namespace BasicDataTypes
 
             Console.WriteLine();
         }
-        static void Main(string[] args)
+        static void Main()
         {
             LocalVarDeclarations();
             DefaultDeclarations();
